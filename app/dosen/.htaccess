@@ -7,6 +7,7 @@ RewriteRule ^peminjaman-buku$ home.php?module=pages/views/v_peminjaman [L]
 RewriteRule ^pengembalian-buku$ home.php?module=pages/views/v_pengembalian [L]
 RewriteRule ^profil-saya$ home.php?module=pages/views/v_profil [L]
 RewriteRule ^pengajuan_judul$ home.php?module=pages/views/v_pengajuanjudul [L]
+RewriteRule ^pengajuan_kp$ home.php?module=pages/views/v_pengajuankp [L]
 RewriteRule ^pesan$ home.php?module=pages/views/v_pesan [L]
 
 RewriteRule ^keluar$ logout.php [L]

@@ -19,6 +19,7 @@
             <!-- <li><a href="peminjaman-buku"><i class="fa fa-exchange"></i> <span>Peminjaman Buku</span></a></li>
             <li><a href="pengembalian-buku"><i class="fa fa-repeat"></i> <span>Pengembalian Buku</span></a></li> -->
             <li><a href="pengajuan_judul"><i class="fa fa-book"></i> <span>Pengajuan Judul</span></a></li>
+            <li><a href="pengajuan_kp"><i class="fa fa-book"></i> <span>Pengajuan KP</span></a></li>
             <li class="header">LAIN LAIN</li>
             <li><a href="pesan"><i class="fa fa-envelope"></i> <span>Pesan</span>
                     <span class="pull-right-container" id="jumlahPesan">

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 23 Des 2023 pada 20.32
+-- Waktu pembuatan: 25 Des 2023 pada 20.08
 -- Versi server: 10.4.16-MariaDB
 -- Versi PHP: 7.4.12
 
@@ -135,6 +135,30 @@ CREATE TABLE `pengajuan` (
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `pengajuan_kp`
+--
+
+CREATE TABLE `pengajuan_kp` (
+  `id_kp` int(11) NOT NULL,
+  `id_mahasiswa` int(11) NOT NULL,
+  `nama_mahasiswa` varchar(255) NOT NULL,
+  `judul` text NOT NULL,
+  `link_berkas` varchar(255) NOT NULL,
+  `kode_dosen` varchar(25) NOT NULL,
+  `nama_dosen` varchar(100) NOT NULL,
+  `status_pengajuan` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `pengajuan_kp`
+--
+
+INSERT INTO `pengajuan_kp` (`id_kp`, `id_mahasiswa`, `nama_mahasiswa`, `judul`, `link_berkas`, `kode_dosen`, `nama_dosen`, `status_pengajuan`) VALUES
+(1, 13, 'budi', 'Aku Disini', 'ketikan', 'D001', 'ujang', 2);
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `pesan`
 --
 
@@ -174,7 +198,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `kode_user`, `nis`, `fullname`, `username`, `password`, `kelas`, `alamat`, `verif`, `role`, `join_date`, `terakhir_login`) VALUES
-(1, '-', '-', 'Administrator', 'admin', 'admin', '-', '-', 'Iya', 'Admin', '04-05-2021', '24-12-2023 ( 01:45:31 )');
+(1, '-', '-', 'Administrator', 'admin', 'admin', '-', '-', 'Iya', 'Admin', '04-05-2021', '26-12-2023 ( 01:37:27 )'),
+(13, 'AP001', '', 'budi', 'budi', '123456', '', '', 'Tidak', 'Anggota', '25-12-2023', '26-12-2023 ( 02:02:49 )'),
+(14, 'D001', '', 'ujang', 'ujang', '123456', '', '', 'Tidak', 'Dosen', '25-12-2023', '26-12-2023 ( 01:54:58 )');
 
 --
 -- Indexes for dumped tables
@@ -221,6 +247,12 @@ ALTER TABLE `penerbit`
 --
 ALTER TABLE `pengajuan`
   ADD PRIMARY KEY (`id_pengajuan`);
+
+--
+-- Indeks untuk tabel `pengajuan_kp`
+--
+ALTER TABLE `pengajuan_kp`
+  ADD PRIMARY KEY (`id_kp`);
 
 --
 -- Indeks untuk tabel `pesan`
@@ -278,7 +310,13 @@ ALTER TABLE `penerbit`
 -- AUTO_INCREMENT untuk tabel `pengajuan`
 --
 ALTER TABLE `pengajuan`
-  MODIFY `id_pengajuan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id_pengajuan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+
+--
+-- AUTO_INCREMENT untuk tabel `pengajuan_kp`
+--
+ALTER TABLE `pengajuan_kp`
+  MODIFY `id_kp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `pesan`
@@ -290,7 +328,7 @@ ALTER TABLE `pesan`
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

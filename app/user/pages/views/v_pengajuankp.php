@@ -3,7 +3,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1 style="font-family: 'Quicksand', sans-serif; font-weight: bold;">
-           Pengajuan Judul TA
+           Pengajuan Judul KP
             <small>
                 <script type='text/javascript'>
                     var months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
@@ -22,7 +22,7 @@
         </h1>
         <ol class="breadcrumb">
             <li><a href="dashboard"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-            <li class="active">Pengajuan Judul TA</li>
+            <li class="active">Pengajuan Judul KP</li>
         </ol>
     </section>
 
@@ -39,7 +39,7 @@
                         <!-- Font Awesome Icons -->
                         <div class="tab-pane active" id="tgl-pinjam">
                             <section id="new">
-                                <form action="pages/function/Pengajuan.php?aksi=pengajuan" method="POST">
+                                <form action="pages/function/PengajuanKP.php?aksi=pengajuan" method="POST">
                                     <?php
                                     include "../../config/koneksi.php";
                                     $id_user = $_SESSION['id_user'];
@@ -95,7 +95,7 @@
 
                                 $no = 1;
                                 $fullname = $_SESSION['fullname'];
-                                $query = mysqli_query($koneksi, "SELECT * FROM pengajuan WHERE nama_mahasiswa = '$fullname'");
+                                $query = mysqli_query($koneksi, "SELECT * FROM pengajuan_kp WHERE nama_mahasiswa = '$fullname'");
                                 while ($row = mysqli_fetch_assoc($query)) {
                                 ?>
                                     <tbody>
